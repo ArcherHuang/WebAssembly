@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+    <script src="wasm-loader.js" type="text/javascript"></script>
+</head>
+<body>
+    <script>
+        fetchAndInstantiateWasm('add.wasm', {})
+            .then(m => {
+                // console.log(m.add(5,6));
+                document.write(m.add(8,6));
+            });
+    </script>
+</body>
+</html>
